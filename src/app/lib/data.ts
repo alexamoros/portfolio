@@ -2,6 +2,7 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
+import serodeImg from "../../../public/serode-screenshot.png";
 
 export const links = [
   {
@@ -58,9 +59,9 @@ export const projectsData = [
   {
     title: "Serode",
     description:
-      "Como proyecto final de DAW creé Serode junto con un comapañero. Serode es una aplicación de gestión de tareas basada en kanban.",
+      "Como proyecto final de DAW creé Serode junto con Alejandro Torcuato. Serode es una aplicación de gestión de tareas basada en kanban con drag and drop.",
     tags: ["React", "Node.js", "Express", "MongoDB", "Bootstrap"],
-    //imageUrl: serodeImg, TO-DO
+    imageUrl: serodeImg,
   },
 ] as const;
 
