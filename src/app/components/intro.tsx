@@ -9,7 +9,10 @@ import { BiSolidMessage } from "react-icons/bi";
 
 export default function Intro() {
   return (
-    <section>
+    <section
+      id="inicio"
+      className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]"
+    >
       <div className="flex items-center justify-center">
         <motion.div
           initial={{ opacity: 0, scale: 0 }}
