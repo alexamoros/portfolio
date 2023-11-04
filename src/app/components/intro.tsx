@@ -1,17 +1,29 @@
 "use client";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
 import { BiSolidFilePdf } from "react-icons/bi";
 import { BiSolidMessage } from "react-icons/bi";
+import { useActiveSectionContext } from "@/context/active-section-context";
+import { useInView } from "react-intersection-observer";
 
 export default function Intro() {
+  const { ref, inView } = useInView();
+  const { setActiveSection } = useActiveSectionContext();
+
+  useEffect(() => {
+    if (inView) {
+      setActiveSection("Inicio");
+    }
+  }, [inView, setActiveSection]);
+
   return (
     <section
       id="inicio"
       className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]"
+      ref={ref}
     >
       <div className="flex items-center justify-center">
         <motion.div
