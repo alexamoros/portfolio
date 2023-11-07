@@ -3,6 +3,21 @@ import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import serodeImg from "../../../public/serode-screenshot.png";
+import {
+  TbBrandCss3,
+  TbBrandHtml5,
+  TbBrandJavascript,
+  TbBrandLaravel,
+  TbBrandMongodb,
+  TbBrandMysql,
+  TbBrandNextjs,
+  TbBrandNodejs,
+  TbBrandPhp,
+  TbBrandReact,
+  TbBrandRedux,
+  TbBrandTailwind,
+  TbBrandTypescript,
+} from "react-icons/tb";
 
 export const links = [
   {
@@ -37,7 +52,7 @@ export const experiencesData = [
     date: "marzo 2023 - junio 2023",
   },
   {
-    title: "CV Skills",
+    title: "CV names",
     location: "Valencia",
     description:
       "Como parte de mi educación tuve la oportunidad de participar en la modalidad de Desarrollo Web. Creé una aplicación web (frontend y backend) desde cero y sin acceso a Internet",
@@ -66,17 +81,69 @@ export const projectsData = [
 ] as const;
 
 export const skillsData = [
-  "TbBrandHtml5",
-  "TbBrandCss3",
-  "TbBrandTailwind",
-  "TbBrandJavascript",
-  "TbBrandTypescript",
-  "TbBrandReact",
-  "TbBrandRedux",
-  "TbBrandNextjs",
-  "TbBrandNodejs",
-  "TbBrandPhp",
-  "TbBrandLaravel",
-  "TbBrandMysql",
-  "TbBrandMongodb",
+  {
+    name: "Html5",
+    icon: React.createElement(TbBrandHtml5),
+    style: "bg-orange-400 rounded-2xl",
+  },
+  {
+    name: "Css3",
+    icon: React.createElement(TbBrandCss3),
+    style: "bg-blue-400 rounded-2xl",
+  },
+  {
+    name: "Tailwind",
+    icon: React.createElement(TbBrandTailwind),
+    style: "bg-blue-400 rounded-2xl",
+  },
+  {
+    name: "JavaScript",
+    icon: React.createElement(TbBrandJavascript),
+    style: "bg-yellow-400 rounded-2xl",
+  },
+  {
+    name: "TypeScript",
+    icon: React.createElement(TbBrandTypescript),
+    style: "bg-purple-400 rounded-2xl",
+  },
+  {
+    name: "React",
+    icon: React.createElement(TbBrandReact),
+    style: "bg-blue-400 rounded-2xl",
+  },
+  {
+    name: "Redux",
+    icon: React.createElement(TbBrandRedux),
+    style: "bg-purple-400 rounded-2xl",
+  },
+  {
+    name: "Next.js",
+    icon: React.createElement(TbBrandNextjs),
+    style: "bg-gray-400 rounded-2xl",
+  },
+  {
+    name: "Node.js",
+    icon: React.createElement(TbBrandNodejs),
+    style: "bg-green-400 rounded-2xl",
+  },
+  {
+    name: "Php",
+    icon: React.createElement(TbBrandPhp),
+    style: "bg-purple-400 rounded-2xl",
+  },
+  {
+    name: "Laravel",
+    icon: React.createElement(TbBrandLaravel),
+    style: "bg-orange-400 rounded-2xl",
+  },
+  {
+    name: "MySQL",
+    icon: React.createElement(TbBrandMysql),
+    style: "bg-blue-400 rounded-2xl",
+  },
+  {
+    name: "MongoDB",
+    icon: React.createElement(TbBrandMongodb),
+    style: "bg-green-400 rounded-2xl",
+  },
 ] as const;
