@@ -39,7 +39,7 @@ export default function Skills() {
             viewport={{ once: true }}
             custom={index}
           >
-            <li className="text-white rounded-full h-20 w-20 flex justify-center items-center">
+            <li className="text-white rounded-full h-20 w-20 flex justify-center items-center borderBlack">
               {skill.icon}
             </li>
           </motion.div>
