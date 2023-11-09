@@ -7,9 +7,11 @@ import { BsGithub, BsLinkedin } from "react-icons/bs";
 import { BiSolidFilePdf } from "react-icons/bi";
 import { BiSolidMessage } from "react-icons/bi";
 import { useSectionInView } from "@/lib/hooks";
+import { useActiveSectionContext } from "@/context/active-section-context";
 
 export default function Intro() {
   const { ref } = useSectionInView("Inicio", 0.5);
+  const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
   return (
     <section
@@ -69,29 +71,33 @@ export default function Intro() {
         transition={{ delay: 0.1 }}
       >
         <Link
-          href="#contact"
-          className="bg-yellow-300 p-4 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
+          href="#contacto"
+          className="bg-yellow-300 p-4 flex items-center gap-2 rounded-full borderBlack outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
+          onClick={() => {
+            setActiveSection("Contacto");
+            setTimeOfLastClick(Date.now());
+          }}
         >
           <BiSolidMessage />
         </Link>
         <a
           href="/CV.pdf"
           download
-          className="bg-yellow-300 p-4 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition cursor-pointer"
+          className="bg-yellow-300 p-4 flex items-center gap-2 rounded-full borderBlack outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition cursor-pointer"
         >
           <BiSolidFilePdf />
         </a>
         <a
           href="https://linkedin.com"
           target="_blank"
-          className="bg-yellow-300 p-4 flex items-center gap-2 rounded-full focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition cursor-pointer"
+          className="bg-yellow-300 p-4 flex items-center gap-2 borderBlack rounded-full focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition cursor-pointer"
         >
           <BsLinkedin />
         </a>
         <a
           href="https://github.com"
           target="_blank"
-          className="bg-yellow-300 p-4 flex items-center gap-2 rounded-full focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition cursor-pointer"
+          className="bg-yellow-300 p-4 flex items-center gap-2 borderBlack rounded-full focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition cursor-pointer"
         >
           <BsGithub />
         </a>
